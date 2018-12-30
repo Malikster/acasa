@@ -70,15 +70,17 @@ public class MainActivity extends Activity
 		button1.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(MainActivity.this, "Baia Mare", Toast.LENGTH_SHORT).show();
-					new RequestTask().execute(urlSet);
-					
+					String urlAttr = "/?LED1";
+					new RequestTask().execute(urlSet + urlAttr);
+					Toast.makeText(MainActivity.this, "Baia Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button2.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
+					String urlAttr = "/?LED2";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Dressing", Toast.LENGTH_SHORT).show();
 
 				}
