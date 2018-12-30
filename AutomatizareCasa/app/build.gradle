@@ -1,0 +1,28 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "ro.thich.acasa"
+        minSdkVersion 14
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+		
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            useProguard true
+        }
+    }
+}
+
+dependencies {
+	compile 'com.android.support:support-v4:27.+'
+	compile 'com.android.support:appcompat-v7:27.+'
+	compile 'com.android.support:preference-v7:27.+'
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
