@@ -14,6 +14,7 @@ import org.apache.http.impl.client.*;
 
 public class MainActivity extends Activity 
 {
+	String urlSet = "http://www.google.ro";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -70,7 +71,7 @@ public class MainActivity extends Activity
 				@Override
 				public void onClick(View v) {
 					Toast.makeText(MainActivity.this, "Baia Mare", Toast.LENGTH_SHORT).show();
-					new RequestTask().execute("http://www.google.ro");
+					new RequestTask().execute(urlSet);
 					
 
 				}
