@@ -70,7 +70,7 @@ public class MainActivity extends Activity
 				@Override
 				public void onClick(View v) {
 					Toast.makeText(MainActivity.this, "Baia Mare", Toast.LENGTH_SHORT).show();
-					new RequestTask().execute("http://stackoverflow.com");
+					new RequestTask().execute("http://www.google.ro");
 					
 
 				}
