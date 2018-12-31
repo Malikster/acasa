@@ -81,55 +81,62 @@ public class MainActivity extends Activity
 				public void onClick(View v) {
 					String urlAttr = "/?LED2";
 					new RequestTask().execute(urlSet + urlAttr);
-					Toast.makeText(MainActivity.this, "Dressing", Toast.LENGTH_SHORT).show();
+					Toast.makeText(MainActivity.this, "Dressing - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button3.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(MainActivity.this, "Dormitor Mare", Toast.LENGTH_SHORT).show();
+					String urlAttr = "/?LED3";
+					Toast.makeText(MainActivity.this, "Dormitor Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button4.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(MainActivity.this, "Hol Mare", Toast.LENGTH_SHORT).show();
+					String urlAttr = "/?LED4";
+					Toast.makeText(MainActivity.this, "Hol Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button5.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(MainActivity.this, "Hol Mic", Toast.LENGTH_SHORT).show();
+					String urlAttr = "/?LED5";
+					Toast.makeText(MainActivity.this, "Hol Mic - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button6.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(MainActivity.this, "Living", Toast.LENGTH_SHORT).show();
+					String urlAttr = "/?LED6";
+					Toast.makeText(MainActivity.this, "Living - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button7.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(MainActivity.this, "Bucatarie", Toast.LENGTH_SHORT).show();
+					String urlAttr = "/?LED7";
+					Toast.makeText(MainActivity.this, "Bucatarie - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button8.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					Toast.makeText(MainActivity.this, "Camera Christina", Toast.LENGTH_SHORT).show();
+					String urlAttr = "/?LED8";
+					Toast.makeText(MainActivity.this, "Camera Christina - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
 			});
 		button9.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
+					String urlAttr = "/?LED9";
 					Toast.makeText(MainActivity.this, "Baie Christina", Toast.LENGTH_SHORT).show();
 
 				}
