@@ -1,7 +1,9 @@
 package ro.thich.acasa;
 
 import android.app.*;
+import android.content.*;
 import android.os.*;
+import android.support.v7.preference.*;
 import android.view.*;
 import android.view.View.*;
 import android.widget.*;
@@ -14,7 +16,10 @@ import org.apache.http.impl.client.*;
 
 public class MainActivity extends Activity 
 {
-	String urlSet = "http://www.google.ro";
+	SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+	
+	String urlSet = SP.getString("address", "http://www.google.ro");
+	
 	
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -157,8 +162,8 @@ public class MainActivity extends Activity
 		
 		switch (item.getItemId()) {
 			case R.id.setari:
-				//startActivity(new Intent(this, Setari.class));
-				Toast.makeText(MainActivity.this, "Meniu setari inexistent", Toast.LENGTH_LONG).show();
+				startActivity(new Intent(this, MyPreferencesActivity.class));
+				//Toast.makeText(MainActivity.this, "Meniu setari inexistent", Toast.LENGTH_LONG).show();
 				return true;
 			case R.id.about:
 				//startActivity(new Intent(this, About.class));
