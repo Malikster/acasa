@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
-	<EditTextPreference android:title="Your Name"
+	<EditTextPreference android:title="Adresa ip"
 		android:key="address"
+		android:defaultValue="http://www.google.ro"
 		android:summary="Please provide server address"></EditTextPreference>
 	<CheckBoxPreference android:title="Application Updates"
 		android:defaultValue="false"

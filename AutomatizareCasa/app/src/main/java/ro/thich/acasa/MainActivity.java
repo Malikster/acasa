@@ -16,10 +16,11 @@ import org.apache.http.impl.client.*;
 
 public class MainActivity extends Activity 
 {
-	SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+	//SharedPreferences SP = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
 	
-	String urlSet = SP.getString("address", "http://www.google.ro");
+	//String urlSet = SP.getString("address", "http://www.google.ro");
 	
+	String urlSet = "http://192.168.1.125:8080";
 	
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -75,7 +76,7 @@ public class MainActivity extends Activity
 		button1.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED1";
+					String urlAttr = "/?led1";
 					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Baia Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
@@ -84,7 +85,7 @@ public class MainActivity extends Activity
 		button2.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED2";
+					String urlAttr = "/?led2";
 					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Dressing - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
@@ -93,7 +94,7 @@ public class MainActivity extends Activity
 		button3.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED3";
+					String urlAttr = "/?led3";
 					Toast.makeText(MainActivity.this, "Dormitor Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -101,7 +102,7 @@ public class MainActivity extends Activity
 		button4.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED4";
+					String urlAttr = "/?led4";
 					Toast.makeText(MainActivity.this, "Hol Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -109,7 +110,7 @@ public class MainActivity extends Activity
 		button5.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED5";
+					String urlAttr = "/?led5";
 					Toast.makeText(MainActivity.this, "Hol Mic - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -117,7 +118,7 @@ public class MainActivity extends Activity
 		button6.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED6";
+					String urlAttr = "/?led6";
 					Toast.makeText(MainActivity.this, "Living - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -125,7 +126,7 @@ public class MainActivity extends Activity
 		button7.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED7";
+					String urlAttr = "/?led7";
 					Toast.makeText(MainActivity.this, "Bucatarie - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -133,7 +134,7 @@ public class MainActivity extends Activity
 		button8.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED8";
+					String urlAttr = "/?led8";
 					Toast.makeText(MainActivity.this, "Camera Christina - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -141,14 +142,16 @@ public class MainActivity extends Activity
 		button9.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?LED9";
+					String urlAttr = "/?led9";
 					Toast.makeText(MainActivity.this, "Baie Christina", Toast.LENGTH_SHORT).show();
 
 				}
 			});
     }
 	
+
 	
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 
 		MenuInflater inflater = getMenuInflater();
@@ -156,13 +159,14 @@ public class MainActivity extends Activity
 		return true;
 	}
 	
+	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 
 		//respond to menu item selection
 		
 		switch (item.getItemId()) {
 			case R.id.setari:
-				startActivity(new Intent(this, MyPreferencesActivity.class));
+				startActivity(new Intent(MainActivity.this, MyPreferencesActivity.class));
 				//Toast.makeText(MainActivity.this, "Meniu setari inexistent", Toast.LENGTH_LONG).show();
 				return true;
 			case R.id.about:
