@@ -20,13 +20,7 @@
 	
 		
 
-	<TextView
-		android:text="@string/hello_world"
-		android:layout_width="match_parent"
-		android:layout_height="wrap_content"
-		android:layout_gravity="top|center"
-		android:id="@+id/mainTextView1"
-		android:gravity="top|center"/>
+	
 
 	<include
 		android:id="@+id/button1"
