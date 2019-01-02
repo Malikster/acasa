@@ -76,7 +76,7 @@ public class MainActivity extends Activity
 		button1.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?led1";
+					String urlAttr = "/?led0";
 					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Baia Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
@@ -95,6 +95,7 @@ public class MainActivity extends Activity
 				@Override
 				public void onClick(View v) {
 					String urlAttr = "/?led3";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Dormitor Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -102,7 +103,8 @@ public class MainActivity extends Activity
 		button4.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?led4";
+					String urlAttr = "/?led5";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Hol Mare - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -110,7 +112,8 @@ public class MainActivity extends Activity
 		button5.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?led5";
+					String urlAttr = "/?led4";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Hol Mic - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -118,7 +121,8 @@ public class MainActivity extends Activity
 		button6.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?led6";
+					String urlAttr = "/?led8";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Living - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -126,7 +130,8 @@ public class MainActivity extends Activity
 		button7.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?led7";
+					String urlAttr = "/?led9";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Bucatarie - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -134,7 +139,8 @@ public class MainActivity extends Activity
 		button8.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?led8";
+					String urlAttr = "/?led10";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Camera Christina - " + urlSet + urlAttr, Toast.LENGTH_SHORT).show();
 
 				}
@@ -142,7 +148,8 @@ public class MainActivity extends Activity
 		button9.setOnClickListener( new OnClickListener() {
 				@Override
 				public void onClick(View v) {
-					String urlAttr = "/?led9";
+					String urlAttr = "/?led11";
+					new RequestTask().execute(urlSet + urlAttr);
 					Toast.makeText(MainActivity.this, "Baie Christina", Toast.LENGTH_SHORT).show();
 
 				}

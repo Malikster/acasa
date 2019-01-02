@@ -20,14 +20,12 @@
 	
 		
 
-	
-
 	<include
 		android:id="@+id/button1"
 		layout="@layout/test_button"
 		android:layout_width="fill_parent"
 		android:layout_height="wrap_content"
-		android:layout_below="@id/mainTextView1"/>
+		android:gravity="top|center"/>
 	<include
 		android:id="@+id/button2"
 		layout="@layout/test_button"
